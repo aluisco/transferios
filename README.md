@@ -1,4 +1,4 @@
-# TransferiOW
+# TransferiOS
 
 A Flutter application to improve the experience and interaction with magnetic cards and Cuban banks.
 There is only sample code and some functional screens to display information, there is nothing relevant.
