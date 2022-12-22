@@ -1,7 +1,16 @@
-# TransferiOS
+# transferios
 
-Boilerplate para la creación de Transfermovil para iOS en una versión mas cómoda que la existente usando Flutter.
+A new Flutter project.
 
-## TODO
+## Getting Started
 
-Toda la logica, solo tiene los paquetes esenciales.
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
