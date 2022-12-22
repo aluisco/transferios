@@ -1,16 +1,10 @@
-# transferios
+# TransferiOW
 
-A new Flutter project.
+A Flutter application to improve the experience and interaction with magnetic cards and Cuban banks.
+There is only sample code and some functional screens to display information, there is nothing relevant.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+If you want to contribute to its development you can contact me and we will expand it, it is basically designed for iOS but it can be exported to any platform that supports the execution of USSD codes.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+You can clone the repo and make any improvements you see fit, everyone is welcome.
