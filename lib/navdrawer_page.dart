@@ -13,13 +13,13 @@ class NavDrawer extends StatelessWidget {
             decoration: const BoxDecoration(
                 color: Colors.blue,
                 image: DecorationImage(
-                    fit: BoxFit.fill,
-                    image: AssetImage('assets/images/logo.png'))),
+                    fit: BoxFit.fitHeight,
+                    image: AssetImage('assets/images/225118.png'))),
             child: Container(
               alignment: Alignment.bottomRight,
               child: const Text(
-                'version: ',
-                style: TextStyle(color: Colors.white, fontSize: 25),
+                'Versión: 0.0.01 Alpha',
+                style: TextStyle(color: Colors.white, fontSize: 12),
               ),
             ),
           ),
