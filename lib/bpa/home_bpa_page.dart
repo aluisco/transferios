@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class TabBarPage extends StatelessWidget {
-  const TabBarPage({super.key});
+class HomeBPAPage extends StatelessWidget {
+  const HomeBPAPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class TabBarPage extends StatelessWidget {
               ),
             ],
           ),
-          title: const Text('TransferiOS'),
+          title: const Text('BPA'),
         ),
         body: const TabBarView(
           children: [
