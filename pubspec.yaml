@@ -99,3 +99,4 @@ flutter_icons:
   android: true
   ios: true
   linux: true
+  remove_alpha_ios: true
