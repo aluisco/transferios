@@ -19,7 +19,7 @@ class NavDrawer extends StatelessWidget {
             child: Container(
               alignment: Alignment.bottomRight,
               child: const Text(
-                'Versión: 0.0.01 Alpha',
+                'Versión: 0.0.1 Alpha',
                 style: TextStyle(color: Colors.white, fontSize: 12),
               ),
             ),
@@ -33,6 +33,13 @@ class NavDrawer extends StatelessWidget {
                 return const TransferiOS();
               }))
             },
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          const Divider(color: Colors.black54),
+          const SizedBox(
+            height: 5,
           ),
           ListTile(
             leading: const Icon(Icons.verified_user),
