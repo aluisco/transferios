@@ -38,62 +38,61 @@ class _AuthBandecPageState extends State<AuthBandecPage> {
       appBar: AppBar(
         title: const Text('BANDEC - Autenticación'),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        mainAxisSize: MainAxisSize.max,
-        children: [
-          // text input
-          TextField(
-            controller: _controller,
-            keyboardType: TextInputType.phone,
-            decoration: InputDecoration(
-              labelText: 'Contraseña',
-              suffix: InkWell(
-                onTap: _togglePasswordView,
+      body: Container(
+        margin: const EdgeInsets.all(10.0),
+        child: Column(
+          children: [
+            const SizedBox(
+              height: 10,
+            ),
+            TextField(
+              controller: _controller,
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                labelText: 'Contraseña',
+                suffix: InkWell(
+                  onTap: _togglePasswordView,
 
-                /// This is Magical Function
-                child: Icon(
-                  _isHidden
-                      ?
+                  /// This is Magical Function
+                  child: Icon(
+                    _isHidden
+                        ?
 
-                      /// CHeck Show & Hide.
-                      Icons.visibility
-                      : Icons.visibility_off,
+                        /// CHeck Show & Hide.
+                        Icons.visibility
+                        : Icons.visibility_off,
+                  ),
+                ),
+                icon: const Icon(
+                  Icons.password_sharp,
+                  color: Colors.black,
                 ),
               ),
-              icon: const Icon(
-                Icons.password_sharp,
-                color: Colors.black,
-              ),
+              maxLength: 5,
+              maxLengthEnforcement: MaxLengthEnforcement.enforced,
             ),
-            maxLength: 5,
-            maxLengthEnforcement: MaxLengthEnforcement.enforced,
-          ),
-          // dispaly responce if any
-          if (_response != null)
-            Padding(
-              padding: const EdgeInsets.symmetric(vertical: 8),
-              child: Text(_response!),
-            ),
-          Column(
-            mainAxisSize: MainAxisSize.max,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size.fromHeight(50), // NEW
-                ),
-                onPressed: () {
-                  UssdAdvanced.sendUssd(
-                      code: '*444*40*02*${_controller.text}#',
-                      subscriptionId: 1);
-                  Navigator.of(context).pop();
-                },
-                child: const Text('Iniciar Sesión'),
+            // dispaly responce if any
+            if (_response != null)
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8),
+                child: Text(_response!),
               ),
-            ],
-          )
-        ],
+            ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(50), // NEW
+              ),
+              onPressed: () {
+                UssdAdvanced.sendUssd(
+                    code: '*444*40*02*${_controller.text}#', subscriptionId: 1);
+                Navigator.of(context).pop();
+              },
+              child: const Text('Iniciar Sesión'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -1,14 +1,48 @@
 import 'package:flutter/material.dart';
 import 'package:transferios/bandec/sesion_bandec_page.dart';
 
-class HomeBandecPage extends StatelessWidget {
+import '../navdrawer_page.dart';
+
+class HomeBandecPage extends StatefulWidget {
   const HomeBandecPage({super.key});
+
+  @override
+  State<HomeBandecPage> createState() => _HomeBandecPageState();
+}
+
+class _HomeBandecPageState extends State<HomeBandecPage> {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const HomePage(),
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const Scaffold(
+      body: BodyPage(),
+    );
+  }
+}
+
+class BodyPage extends StatelessWidget {
+  const BodyPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        drawer: const NavDrawer(),
         appBar: AppBar(
           bottom: const TabBar(
             tabs: [
