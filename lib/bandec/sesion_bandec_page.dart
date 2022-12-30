@@ -40,7 +40,25 @@ class SesionBandecPage extends StatelessWidget {
                 minimumSize: const Size.fromHeight(50), // NEW
               ),
               onPressed: () {
-                UssdAdvanced.sendUssd(code: '*444*70#', subscriptionId: 1);
+                showDialog(
+                  context: context,
+                  builder: (BuildContext context) => AlertDialog(
+                    title: const Text('Cerrar Sesión'),
+                    content: const Text(
+                        'Va a remover la autenticación en el Banco.'),
+                    actions: <Widget>[
+                      TextButton(
+                        onPressed: () => Navigator.pop(context, 'Cancelar'),
+                        child: const Text('Cancelar'),
+                      ),
+                      TextButton(
+                        onPressed: () => UssdAdvanced.sendUssd(
+                            code: '*444*70#', subscriptionId: 1),
+                        child: const Text('OK'),
+                      ),
+                    ],
+                  ),
+                );
               },
               child: const Text(
                 'Cerrar Sesión',
