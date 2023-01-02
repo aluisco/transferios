@@ -11,7 +11,6 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           const Center(
             child: Material(
@@ -31,7 +30,7 @@ class HomePage extends StatelessWidget {
             child: Material(
               color: const Color.fromARGB(255, 168, 12, 1),
               elevation: 8,
-              borderRadius: BorderRadius.circular(28),
+              borderRadius: BorderRadius.circular(8),
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black,
@@ -48,20 +47,21 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Ink.image(
-                      image: const AssetImage('assets/images/BANDEC1.jpg'),
-                      height: 70,
-                      width: 70,
+                      image:
+                          const AssetImage('assets/images/tarjeta_bandec.png'),
+                      height: 120,
+                      width: 200,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(
-                      width: 44,
+                      width: 16,
                     ),
                     const Text(
-                      'BANDEC',
+                      '>',
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     ),
                     const SizedBox(
-                      width: 44,
+                      width: 16,
                     ),
                   ],
                 ),
@@ -69,13 +69,13 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15, // <-- SEE HERE
+            height: 30, // <-- SEE HERE
           ),
           Center(
             child: Material(
               color: Colors.brown,
               elevation: 8,
-              borderRadius: BorderRadius.circular(28),
+              borderRadius: BorderRadius.circular(8),
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black,
@@ -92,20 +92,20 @@ class HomePage extends StatelessWidget {
                   mainAxisSize: MainAxisSize.min,
                   children: [
                     Ink.image(
-                      image: const AssetImage('assets/images/bpa.jpeg'),
-                      height: 70,
-                      width: 70,
+                      image: const AssetImage('assets/images/tarjeta_bpa.png'),
+                      height: 120,
+                      width: 200,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(
-                      width: 66,
+                      width: 16,
                     ),
                     const Text(
-                      'BPA',
+                      '>',
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     ),
                     const SizedBox(
-                      width: 66,
+                      width: 16,
                     ),
                   ],
                 ),
@@ -113,13 +113,13 @@ class HomePage extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 15, // <-- SEE HERE
+            height: 30, // <-- SEE HERE
           ),
           Center(
             child: Material(
               color: const Color.fromARGB(255, 2, 124, 18),
               elevation: 8,
-              borderRadius: BorderRadius.circular(28),
+              borderRadius: BorderRadius.circular(8),
               clipBehavior: Clip.antiAliasWithSaveLayer,
               child: InkWell(
                 splashColor: Colors.black,
@@ -137,16 +137,16 @@ class HomePage extends StatelessWidget {
                   children: [
                     Ink.image(
                       image:
-                          const AssetImage('assets/images/METRO_small11.jpg'),
-                      height: 70,
-                      width: 70,
+                          const AssetImage('assets/images/tarjeta_metro.png'),
+                      height: 120,
+                      width: 200,
                       fit: BoxFit.cover,
                     ),
                     const SizedBox(
                       width: 16,
                     ),
                     const Text(
-                      'Metropolitano',
+                      '>',
                       style: TextStyle(fontSize: 22, color: Colors.white),
                     ),
                     const SizedBox(
