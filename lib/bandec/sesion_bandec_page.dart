@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:transferios/bandec/auth_bandec_page.dart';
-import 'package:transferios/ussd_codes_pages.dart';
 import 'package:ussd_advanced/ussd_advanced.dart';
 
 class SesionBandecPage extends StatelessWidget {
@@ -25,7 +24,6 @@ class SesionBandecPage extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (BuildContext context) {
                       return const AuthBandecPage();
-                      // return const USSDCodes();
                     },
                   ),
                 );
