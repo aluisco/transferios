@@ -47,20 +47,13 @@ class _AuthBandecPageState extends State<AuthBandecPage> {
             ),
             TextField(
               controller: _controller,
-              keyboardType: TextInputType.phone,
+              keyboardType: TextInputType.number,
               decoration: InputDecoration(
                 labelText: 'Contraseña',
                 suffix: InkWell(
                   onTap: _togglePasswordView,
-
-                  /// This is Magical Function
                   child: Icon(
-                    _isHidden
-                        ?
-
-                        /// CHeck Show & Hide.
-                        Icons.visibility
-                        : Icons.visibility_off,
+                    _isHidden ? Icons.visibility : Icons.visibility_off,
                   ),
                 ),
                 icon: const Icon(
@@ -79,12 +72,19 @@ class _AuthBandecPageState extends State<AuthBandecPage> {
               ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
-                minimumSize: const Size.fromHeight(50), // NEW
+                minimumSize: const Size.fromHeight(50),
               ),
-              onPressed: () {
-                UssdAdvanced.sendUssd(
-                    code: '*444*40*02*${_controller.text}#', subscriptionId: 1);
-                Navigator.of(context).pop();
+              onPressed: () async {
+                String? res = await UssdAdvanced.multisessionUssd(
+                    code: '*444*40*02#', subscriptionId: 1);
+                setState(() {
+                  _response = res;
+                });
+                String? res2 = await UssdAdvanced.sendMessage(_controller.text);
+                setState(() {
+                  _response = res2;
+                });
+                await UssdAdvanced.cancelSession();
               },
               child: const Text('Iniciar Sesión'),
             ),

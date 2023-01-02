@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:transferios/bandec/sesion_bandec_page.dart';
 import 'package:transferios/navdrawer_page.dart';
 
 class HomeBPAPage extends StatefulWidget {

@@ -157,6 +157,20 @@ class HomePage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(
+            height: 30,
+          ),
+          const Center(
+            child: Material(
+              color: Colors.transparent,
+              child: Text(
+                'Todos los derechos reservados.',
+                style: TextStyle(
+                  fontSize: 10,
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

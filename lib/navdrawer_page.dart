@@ -16,7 +16,7 @@ class NavDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: Colors.indigo,
                 image: DecorationImage(
                     fit: BoxFit.fitHeight,
                     image: AssetImage('assets/images/225118.png'))),
@@ -51,11 +51,9 @@ class NavDrawer extends StatelessWidget {
             height: 5,
           ),
           ListTile(
-            leading: const Image(
-              image: AssetImage('assets/images/BANDEC1.jpg'),
-              height: 35,
-              width: 35,
-              fit: BoxFit.cover,
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/BANDEC1.jpg'),
+              radius: 20,
             ),
             title: const Text(
               'BANDEC',
@@ -71,11 +69,9 @@ class NavDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Image(
-              image: AssetImage('assets/images/bpa.jpeg'),
-              height: 35,
-              width: 35,
-              fit: BoxFit.cover,
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/bpa.jpeg'),
+              radius: 20,
             ),
             title: const Text(
               'BPA',
@@ -91,11 +87,9 @@ class NavDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Image(
-              image: AssetImage('assets/images/METRO_small11.jpg'),
-              height: 35,
-              width: 35,
-              fit: BoxFit.cover,
+            leading: const CircleAvatar(
+              backgroundImage: AssetImage('assets/images/METRO_small11.jpg'),
+              radius: 20,
             ),
             title: const Text(
               'Metropolitano',
