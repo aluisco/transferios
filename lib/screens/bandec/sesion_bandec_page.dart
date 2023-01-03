@@ -40,18 +40,20 @@ class SesionBandecPage extends StatelessWidget with BandecMixin {
                 showDialog(
                   context: context,
                   builder: (BuildContext context) => AlertDialog(
-                    title: const Text('Cerrar Sesión'),
-                    content: const Text(
-                        'Va a remover la autenticación en el Banco.'),
+                    title: const Text('Seleccione'),
+                    content: const Text('Va a cerrar su sesión.'),
                     actions: <Widget>[
                       TextButton(
-                        onPressed: () => Navigator.pop(context, 'Cancelar'),
-                        child: const Text('Cancelar'),
+                        onPressed: () => Navigator.pop(context, 'No'),
+                        child: const Text('No'),
                       ),
                       TextButton(
-                        onPressed: () => UssdAdvanced.sendUssd(
-                            code: '*444*70#', subscriptionId: 1),
-                        child: const Text('OK'),
+                        onPressed: () {
+                          UssdAdvanced.sendUssd(
+                              code: '*444*70#', subscriptionId: 1);
+                          Navigator.pop(context);
+                        },
+                        child: const Text('Sí'),
                       ),
                     ],
                   ),
