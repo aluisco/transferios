@@ -3,7 +3,7 @@ import 'package:transferios/core/utils/material_color_generator.dart';
 
 class AppColor {
   /// App Colors
-  static const Color primary = Color.fromARGB(255, 40, 147, 255);
+  static const Color primary = Colors.indigo;
   static const Color secondary = Colors.grey;
 
   /// Metropolitano colors

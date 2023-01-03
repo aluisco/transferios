@@ -31,7 +31,9 @@ class BpaPage extends StatelessWidget with BpaMixin {
               labelStyle: Theme.of(context).textTheme.labelSmall,
               tabs: const [
                 Tab(
-                  icon: Icon(Icons.key),
+                  icon: Icon(
+                    Icons.key,
+                  ),
                   text: 'Sesión',
                   iconMargin: EdgeInsets.zero,
                 ),

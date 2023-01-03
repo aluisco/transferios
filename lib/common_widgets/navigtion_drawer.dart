@@ -13,7 +13,7 @@ class NavigationDrawer extends StatelessWidget {
         children: <Widget>[
           DrawerHeader(
             decoration: const BoxDecoration(
-                color: Colors.blue,
+                color: Colors.indigo,
                 image: DecorationImage(
                     fit: BoxFit.fitHeight,
                     image: AssetImage('assets/images/225118.png'))),
@@ -49,11 +49,9 @@ class NavigationDrawer extends StatelessWidget {
           ),
           ...BankTypes.values.map(
             (bank) => ListTile(
-              leading: Image(
-                image: AssetImage(bank.imageSrc),
-                height: 35,
-                width: 35,
-                fit: BoxFit.cover,
+              leading: CircleAvatar(
+                backgroundImage: AssetImage(bank.imageSrc),
+                radius: 20,
               ),
               title: Text(bank.name),
               onTap: () {

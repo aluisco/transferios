@@ -12,7 +12,7 @@ class DashboardPage extends StatelessWidget {
       appBar: AppBar(
         elevation: 0,
         title: Text(
-          'Transfer IOS',
+          'TransferiOS',
           style: Theme.of(context)
               .textTheme
               .titleMedium!
