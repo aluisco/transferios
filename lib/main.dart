@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:transferios/home_page.dart';
-import 'package:transferios/navdrawer_page.dart';
+import 'package:transferios/core/style/colors.dart';
+import 'package:transferios/screens/dashboard/dashboard_page.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const TransferiOS());
 }
 
@@ -13,30 +14,14 @@ class TransferiOS extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.indigo,
-      ),
-      home: const RootPage(),
-    );
-  }
-}
-
-class RootPage extends StatefulWidget {
-  const RootPage({super.key});
-
-  @override
-  State<RootPage> createState() => _RootPageState();
-}
-
-class _RootPageState extends State<RootPage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: const NavDrawer(),
-      appBar: AppBar(
-        title: const Text('TransferiOS'),
-      ),
-      body: const HomePage(),
+      color: AppColor.primary,
+      theme: ThemeData.light(
+        useMaterial3: true,
+      ).copyWith(appBarTheme: const AppBarTheme(color: AppColor.primary)),
+      darkTheme: ThemeData.dark(useMaterial3: true)
+          .copyWith(appBarTheme: const AppBarTheme(color: AppColor.primary)),
+      themeMode: ThemeMode.system,
+      home: const DashboardPage(),
     );
   }
 }

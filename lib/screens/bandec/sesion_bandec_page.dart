@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:transferios/bandec/auth_bandec_page.dart';
+import 'package:transferios/core/mixins.dart';
+import 'package:transferios/core/style/colors.dart';
+import 'package:transferios/core/style/dimensions.dart';
+import 'package:transferios/models/models.dart';
+import 'package:transferios/screens/bandec/auth_bandec_page.dart';
 import 'package:ussd_advanced/ussd_advanced.dart';
 
-class SesionBandecPage extends StatelessWidget {
+class SesionBandecPage extends StatelessWidget with BandecMixin {
   const SesionBandecPage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: const EdgeInsets.all(10.0),
+      body: Padding(
+        padding: defPaddingAll,
         child: Column(
           children: <Widget>[
-            const SizedBox(
-              height: 10,
-            ),
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50), // NEW
@@ -28,13 +29,9 @@ class SesionBandecPage extends StatelessWidget {
                   ),
                 );
               },
-              child: const Text(
-                'Autenticarse',
-              ),
+              child: const Text('Autenticarse'),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            16.vSpace,
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50), // NEW
@@ -66,9 +63,7 @@ class SesionBandecPage extends StatelessWidget {
                 'Cerrar Sesión',
               ),
             ),
-            const SizedBox(
-              height: 10,
-            ),
+            16.vSpace,
             ElevatedButton(
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size.fromHeight(50), // NEW
