@@ -19,7 +19,7 @@ class DashboardPage extends StatelessWidget {
               .copyWith(fontWeight: FontWeight.bold),
         ),
         centerTitle: true,
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.background,
       ),
       drawer: const NavigationDrawerOwn(),
       body: Padding(

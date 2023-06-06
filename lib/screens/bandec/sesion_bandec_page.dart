@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:transferios/core/mixins.dart';
-import 'package:transferios/core/style/colors.dart';
 import 'package:transferios/core/style/dimensions.dart';
-import 'package:transferios/models/models.dart';
 import 'package:transferios/screens/bandec/auth_bandec_page.dart';
 import 'package:ussd_advanced/ussd_advanced.dart';
 
