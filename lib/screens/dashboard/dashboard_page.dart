@@ -21,7 +21,7 @@ class DashboardPage extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Theme.of(context).backgroundColor,
       ),
-      drawer: const NavigationDrawer(),
+      drawer: const NavigationDrawerOwn(),
       body: Padding(
         padding: defPaddingAll,
         child: Column(

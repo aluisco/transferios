@@ -16,7 +16,7 @@ class BandecPage extends StatelessWidget with BandecMixin {
       child: DefaultTabController(
         length: 4,
         child: Scaffold(
-          drawer: const NavigationDrawer(),
+          drawer: const NavigationDrawerOwn(),
           appBar: AppBar(
             elevation: 0,
             automaticallyImplyLeading: false,

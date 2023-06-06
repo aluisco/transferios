@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:transferios/main.dart';
 import 'package:transferios/models/bank.dart';
 
-class NavigationDrawer extends StatelessWidget {
-  const NavigationDrawer({super.key});
+class NavigationDrawerOwn extends StatelessWidget {
+  const NavigationDrawerOwn({super.key});
 
   @override
   Widget build(BuildContext context) {
